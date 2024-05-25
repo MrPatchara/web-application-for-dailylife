@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Income and Expenses Calculator</title>
+    <link rel="stylesheet" href="styles2.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Daily Income and Expenses Calculator</h1>
+        <form id="dataForm">
+            <div class="input-group">
+                <label for="date">Date:</label>
+                <input type="date" id="date" name="date" required>
+            </div>
+            <div class="input-group">
+                <label for="income">Income:</label>
+                <input type="number" id="income" name="income" required>
+            </div>
+            <div class="input-group">
+                <label for="expenses">Expenses:</label>
+                <input type="number" id="expenses" name="expenses" required>
+            </div>
+            <button type="button" onclick="addData()">Add Data</button>
+        </form>
+        <div class="chart-container">
+            <canvas id="myChart"></canvas>
+        </div>
+        <button type="button" onclick="exportToExcel()">Export to Excel</button>
+        <div class="table-container">
+            <h2>Report</h2>
+            <table id="reportTable">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Income</th>
+                        <th>Expenses</th>
+                        <th>Total (Income - Expenses)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Data rows will be inserted here -->
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th colspan="3">Overall Total</th>
+                        <th id="overallTotal">0</th>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
+    <script src="script2.js"></script>
+</body>
+</html>

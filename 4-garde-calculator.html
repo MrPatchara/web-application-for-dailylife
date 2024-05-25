@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grade Calculator</title>
+  <link rel="stylesheet" href="styles4.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Grade Calculator</h1>
+    <div class="input-section">
+      <label for="studentNumber">Student Number:</label>
+      <input type="text" id="studentNumber" required>
+      <label for="firstName">First Name:</label>
+      <input type="text" id="firstName" required>
+      <label for="lastName">Last Name:</label>
+      <input type="text" id="lastName" required>
+      <label for="score">Score:</label>
+      <input type="number" id="score" min="0" max="100" required>
+      <button onclick="calculateGrade()">Calculate</button>
+    </div>
+    <div id="result"></div>
+    <div class="statistics-section">
+      <h2>Statistics</h2>
+      <div><strong>Average Grade:</strong> <span id="averageGrade">-</span></div>
+      <div><strong>Minimum Grade:</strong> <span id="minGrade">-</span></div>
+      <div><strong>Maximum Grade:</strong> <span id="maxGrade">-</span></div>
+      <div><strong>Standard Deviation:</strong> <span id="stdDev">-</span></div>
+    </div>
+    <div class="search-filter-section">
+      <h2>Search & Filter</h2>
+      <label for="searchInput">Search:</label>
+      <input type="text" id="searchInput" oninput="filterHistory()">
+    </div>
+      <button onclick="clearHistory()">Clear History</button>
+    <table id="historyTable">
+      <thead>
+        <tr>
+          <th>Student Number</th>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Score</th>
+          <th>Grade</th>
+        </tr>
+      </thead>
+      <tbody id="historyBody"></tbody>
+    </table>
+  </div>
+
+  <script src="xlsx.full.min.js"></script>
+  <script src="script4.js"></script>
+</body>
+</html>

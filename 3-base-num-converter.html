@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Base Number Converter</title>
+    <link rel="stylesheet" href="styles3.css">
+</head>
+<body>
+    <header>
+        <h1>Base Number Converter</h1>
+    </header>
+    <div class="container">
+        <div class="converter">
+            <div class="input-group">
+                <label for="number">Number:</label>
+                <input type="text" id="number" placeholder="Enter a number">
+            </div>
+            <div class="input-group">
+                <label for="base-from">From Base:</label>
+                <select id="base-from">
+                    <option value="2">Binary (2)</option>
+                    <option value="3">Base-3 (3)</option>
+                    <option value="5">Base-5 (5)</option>
+                    <option value="8">Octal (8)</option>
+                    <option value="10" selected>Decimal (10)</option>
+                    <option value="12">Base-12 (12)</option>
+                    <option value="16">Hexadecimal (16)</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label for="base-to">To Base:</label>
+                <select id="base-to">
+                    <option value="2">Binary (2)</option>
+                    <option value="3">Base-3 (3)</option>
+                    <option value="5">Base-5 (5)</option>
+                    <option value="8">Octal (8)</option>
+                    <option value="10">Decimal (10)</option>
+                    <option value="12">Base-12 (12)</option>
+                    <option value="16">Hexadecimal (16)</option>
+                </select>
+            </div>
+            <div class="button-group">
+                <button id="convert-btn">Convert</button>
+                <button id="reset-btn">Reset</button>
+                <button id="copy-btn">Copy Result</button>
+                <button id="toggle-dark-mode">Toggle Dark Mode</button>
+            </div>
+            <div id="result"></div>
+            <div id="history"></div>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 Base Number Converter. All rights reserved.</p>
+    </footer>
+    <script src="script3.js"></script>
+</body>
+</html>
