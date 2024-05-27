@@ -20,19 +20,19 @@ document.addEventListener('DOMContentLoaded', () => {
         const baseTo = parseInt(baseToSelect.value);
 
         if (number === '') {
-            resultDiv.textContent = 'Please enter a number.';
+            resultDiv.textContent = 'โปรดใส่ตัวเลขที่ถูกต้อง';
             return;
         }
 
         if (!isValidNumber(number, baseFrom)) {
-            resultDiv.textContent = `Invalid number for base ${baseFrom}.`;
+            resultDiv.textContent = `ข้อมูลไม่ถูกต้อง เลขฐาน ${baseFrom}.`;
             return;
         }
 
         try {
             const decimalNumber = parseInt(number, baseFrom);
             const convertedNumber = decimalNumber.toString(baseTo).toUpperCase();
-            resultDiv.textContent = `Result: ${convertedNumber}`;
+            resultDiv.textContent = `ผลลัพธ์: ${convertedNumber}`;
             addHistoryItem(number, baseFrom, convertedNumber, baseTo);
         } catch (error) {
             resultDiv.textContent = error.message;
@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const addHistoryItem = (number, baseFrom, convertedNumber, baseTo) => {
         const historyItem = document.createElement('div');
         historyItem.classList.add('history-item');
-        historyItem.textContent = `${number} (base ${baseFrom}) -> ${convertedNumber} (base ${baseTo})`;
+        historyItem.textContent = `${number} (ฐาน ${baseFrom}) -> ${convertedNumber} (ฐาน ${baseTo})`;
         historyDiv.appendChild(historyItem);
     };
 

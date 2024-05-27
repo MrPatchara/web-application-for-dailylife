@@ -3,7 +3,7 @@ function calculateBMI() {
     const height = parseFloat(document.getElementById('height').value) / 100; // convert cm to meters
 
     if (isNaN(weight) || isNaN(height) || height <= 0) {
-        alert('Please enter valid weight and height values.');
+        alert('ใส่ข้อมูลให้ครบด้วยจ้า...');
         return;
     }
 

@@ -8,7 +8,7 @@ function calculateGrade() {
   const score = parseFloat(scoreInput.value);
 
   if (isNaN(score) || score < 0 || score > 100) {
-    alert('Please enter a valid score between 0 and 100.');
+    alert('กรุณาระบุคะแนนที่ถูกต้อง (0-100)');
     return;
   }
 
@@ -27,7 +27,7 @@ function calculateGrade() {
   }
 
   const resultDiv = document.getElementById('result');
-  resultDiv.innerHTML = `Your grade is: <strong>${grade}</strong>`;
+  resultDiv.innerHTML = `ได้เกรด : <strong>${grade}</strong>`;
 
   const entry = {
     studentNumber: studentNumber,

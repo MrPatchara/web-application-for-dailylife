@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="th">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,40 +8,41 @@
 </head>
 <body>
   <div class="container">
-    <h1>Grade Calculator</h1>
+    <h1>โปรแกรมคํานวณเกรด และ แสดงค่าสถิติ</h1>
     <div class="input-section">
-      <label for="studentNumber">Student Number:</label>
+      <label for="studentNumber">รหัสนักเรียน:</label>
       <input type="text" id="studentNumber" required>
-      <label for="firstName">First Name:</label>
+      <label for="firstName">ชื่อ:</label>
       <input type="text" id="firstName" required>
-      <label for="lastName">Last Name:</label>
+      <label for="lastName">นามสกุุล:</label>
       <input type="text" id="lastName" required>
-      <label for="score">Score:</label>
+      <label for="score">คะแนน (100):</label>
       <input type="number" id="score" min="0" max="100" required>
-      <button onclick="calculateGrade()">Calculate</button>
+      <button onclick="calculateGrade()">คํานวณ</button><br>
+      <a href="index.html">กลับไปหน้าแรก</a>
     </div>
     <div id="result"></div>
     <div class="statistics-section">
-      <h2>Statistics</h2>
-      <div><strong>Average Grade:</strong> <span id="averageGrade">-</span></div>
-      <div><strong>Minimum Grade:</strong> <span id="minGrade">-</span></div>
-      <div><strong>Maximum Grade:</strong> <span id="maxGrade">-</span></div>
-      <div><strong>Standard Deviation:</strong> <span id="stdDev">-</span></div>
+      <h2>สถิติ</h2>
+      <div><strong>คะแนนเฉลี่ย:</strong> <span id="averageGrade">-</span></div>
+      <div><strong>คะแนนตํ่าสุด:</strong> <span id="minGrade">-</span></div>
+      <div><strong>คะแนนสูงสุด:</strong> <span id="maxGrade">-</span></div>
+      <div><strong>ส่วนเบี่ยงเบนมาตรฐาน:</strong> <span id="stdDev">-</span></div>
     </div>
     <div class="search-filter-section">
-      <h2>Search & Filter</h2>
-      <label for="searchInput">Search:</label>
+      <h2>ค้นหา</h2>
+      <label for="searchInput">ระบุรหัสนักเรียน:</label>
       <input type="text" id="searchInput" oninput="filterHistory()">
     </div>
-      <button onclick="clearHistory()">Clear History</button>
+      <button onclick="clearHistory()">ลบประวัติ</button>
     <table id="historyTable">
       <thead>
         <tr>
-          <th>Student Number</th>
-          <th>First Name</th>
-          <th>Last Name</th>
-          <th>Score</th>
-          <th>Grade</th>
+          <th>รหัสนักเรียน</th>
+          <th>ชื่อ</th>
+          <th>นามสกุุล</th>
+          <th>คะแนน</th>
+          <th>เกรด</th>
         </tr>
       </thead>
       <tbody id="historyBody"></tbody>

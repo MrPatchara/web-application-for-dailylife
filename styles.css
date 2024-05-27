@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: #bb8585;
     margin: 0;
     padding: 0;
 }
@@ -35,14 +35,14 @@ input, select, button {
 }
 
 button {
-    background-color: #007BFF;
+    background-color: #b02c29;
     color: #fff;
     border: none;
     cursor: pointer;
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #333c47;
 }
 
 #result {
